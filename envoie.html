@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página principal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="envoie.js"></script>
+    <link rel="stylesheet" href="style_Envoie.css">
+
+
+</head>
+<body>
+<div class="container">
+    <br><br><br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#conectarModal">Conectar</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastrarModal">Novo usuário</button>
+</div>
+<!-- Modal Conectar -->
+<div class="modal fade" id="conectarModal" tabindex="-1" role="dialog" aria-labelledby="conectarModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="conectarModalLabel">Conectar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formConectar">
+                    <div class="form-group">
+                        <label for="login">Login</label>
+                        <input type="text" class="form-control" id="login" name="login" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                </form>
+                <div id="erroConectar" class="alert alert-danger" style="display:none;">Usuário ou senha incorretos</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Anular</button>
+                <button type="button" class="btn btn-primary" id="btnConectar">Conectar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Cadastrar -->
+<div class="modal fade" id="cadastrarModal" tabindex="-1" role="dialog" aria-labelledby="cadastrarModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastrarModalLabel">Novo usuário</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formCadastrar">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" required>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control" id="telefone" name="telefone" required pattern="[0-9]{10,11}">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" class="form-control" id="usuario" name="usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senhaCad">Senha</label>
+                        <input type="password" class="form-control" id="senhaCad" name="senhaCad" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confSenha">Confirmação de senha</label>
+                        <input type="password" class="form-control" id="confSenha" name="confSenha" required>
+                    </div>
+                </form>
+                <div id="erroCadastrar" class="alert alert-danger" style="display:none;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Anular</button>
+                <button type="button" class="btn btn-primary" id="btnCadastrar">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+</div>

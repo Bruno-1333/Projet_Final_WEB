@@ -1,0 +1,12 @@
+body {
+    background-image: url('tecnologia.jpg');
+    color: silver;
+}
+.btn-primary {
+    background-color: black;
+    border-color: black;
+}
+.btn-primary:hover {
+    background-color: silver;
+    border-color: silver;
+}

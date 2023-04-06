@@ -1,0 +1,14 @@
+body {
+    background-image: url('https://url-da-sua-imagem-de-tecnologia-aqui');
+    background-color: black;
+    background-size: cover;
+    color: silver;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
